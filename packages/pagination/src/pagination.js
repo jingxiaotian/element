@@ -77,7 +77,7 @@ export default {
       pager: <pager currentPage={ this.internalCurrentPage } pageCount={ this.internalPageCount } pagerCount={ this.pagerCount } on-change={ this.handleCurrentChange } disabled={ this.disabled }></pager>,
       next: <next></next>,
       sizes: <sizes pageSizes={ this.pageSizes }></sizes>,
-      slot: <my-slot></my-slot>,
+      slot: <my-slot data={this.internalCurrentPage, this.internalPageCount , this.pagerCount }></my-slot>,
       total: <total></total>
     };
     const components = layout.split(',').map((item) => item.trim());
